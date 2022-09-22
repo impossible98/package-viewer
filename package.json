@@ -1,0 +1,30 @@
+{
+    "name": "package-viewer",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "build": "ncc build ./src/main.ts -o ./dist",
+        "dev": "nodemon ./src/main.ts",
+        "fmt": "prettier --write ./",
+        "serve": "pm2 start --name pack-viewer ./dist/index.js",
+        "stop": "pm2 stop pack-viewer"
+    },
+    "dependencies": {
+        "dotenv": "^6.0.0",
+        "express": "^4.0.0",
+        "internal-ip": "^6.0.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.0.0",
+        "@types/node": "^18.0.0",
+        "@vercel/ncc": "^0.34.0",
+        "nodemon": "^2.0.0",
+        "pm2": "^5.0.0",
+        "prettier": "^2.0.0",
+        "ts-node": "^10.0.0",
+        "typescript": "^4.0.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}
